@@ -1,0 +1,29 @@
+.
+├── libs
+│   ├── helper
+│   │   ├── evaluate_match.py
+│   │   ├── __init__.py
+│   │   ├── parsing.py
+│   │   └── __pycache__
+│   │       ├── evaluate_match.cpython-36.pyc
+│   │       ├── __init__.cpython-36.pyc
+│   │       └── parsing.cpython-36.pyc
+│   ├── __init__.py
+│   ├── match_dic_2_contour.py
+│   ├── __pycache__
+│   │   ├── evaluate_match.cpython-36.pyc
+│   │   ├── __init__.cpython-36.pyc
+│   │   ├── match_dic_2_contour.cpython-36.pyc
+│   │   └── parsing.cpython-36.pyc
+│   └── train_generator.py
+├── __pycache__
+│   └── parsing.cpython-36.pyc
+├── src_dir_tree
+└── test
+    ├── add_path.py
+    ├── __init__.py
+    ├── __pycache__
+    ├── run_test.py
+    └── test_match_dic_2_contour.py
+
+7 directories, 19 files
