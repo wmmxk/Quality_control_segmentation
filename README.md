@@ -1,49 +1,31 @@
-### Dependency
+### Summary
 
-DeepPep, is a **protein identification** software which uses deep-convolutional neural network to predict the protein set from a proteomics mixture, given the sequence universe of possible proteins and a target peptide profile.
+This repo is two subtasks involved in training a neural network for image segmentation.
+Task 1 is to pair up the annotated contour with the raw image. The module ./libs/match_dic_2_contour.py is for this.
+
+In the version, the manually annotated contour is compared with contour genereated by cv2. 
+
+Task 2 is to create a cyclic data generator. The module ./libs/train_generator.py is  for this task
+
 
 ### Dependencies
-* [torch7](http://torch.ch/docs/getting-started.html)
-* luarocks install cephes
-* luarocks install csv
-* [SparseNN](https://github.com/ameenetemady/SparseNN/)
-* python3.4 or above
-* [biopython](http://biopython.org/wiki/Download)
+python: 3.6
+cv2: 3.2.0
+dicom: 0.9.9
+numpy: 1.11.3
 
 
 
-### How to verify?
-```
-git clone https://github.com/ameenetemady/MyCommon.git
-git clone https://github.com/DeepPep/DeepPep.git
-```
-
-### What is changed
-* Step1: prepare a directory containing your input files (with exact names):
-
-  * ```identification.tsv```: tab-delimeted file:  **column1**: peptide, **column2**: protein name, **column3**: identification probability
-  * ```db.fasta```: reference protein database in fasta format.
-
-* Step2: ```python run.py directoryName```
-
-Upon completion, ```pred.csv``` will contain the predicted protein identification probabilities.
-
-### Benchmark Datasets
-There are [7 example datasets](https://github.com/DeepPep/public/tree/master/data) (used for benchmarking in the paper). Each dataset is generated from MS/MS raw files using TPP pipeline. For example, to run the [18Mix benchmark dataset](https://github.com/DeepPep/public/tree/master/data/18mix), simply run the following:
+### How to run?
 
 ```
-python run.py data/18Mix
+ ./libs/match_dic_2_contour.py and ./libs/train_generator.py can be tested by run
+cd ./libs
+python match_dic_2_contour.py # Its output is saved at out_data/tmp/tmp.jpg
+python train_generator.py   #
 ```
-### Support
 
-If you have any questions about DeepPep, please contact Minseung Kim (msgkim@ucdavis.edu) or Ameen Eetemadi (eetemadi@ucdavis.edu).
-
-### Citation
- M. Kim, A. Eetemadi, and I. Tagkopoulos, “DeepPep: deep proteome inference from peptide profiling”, PLoS Computational Biology (2017) [\[link\]](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005661)
-
-### Licence
-See the [LICENSE](./LICENSE) file for license rights and limitations (Apache2.0).
-
-### Acknowledgement
-This work was supported by a grant from Mars, Inc. and NSF award 1516695.
+```
+Another way to run is run the scirpt in ./src/test/run_test.sh for unit test.
+```
 
