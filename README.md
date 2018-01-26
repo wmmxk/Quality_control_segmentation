@@ -28,4 +28,6 @@ python train_generator.py   #
 ```
 Another way to run is run the scirpt in ./src/test/run_test.sh for unit test.
 ```
-
+```
+The last way to test multiple tests is to run the script in ./script/test_match_dic_2_contour.sh 
+```

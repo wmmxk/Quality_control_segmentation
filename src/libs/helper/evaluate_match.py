@@ -10,7 +10,7 @@ def get_contour(img):
     img.save("./tmp.jpg")
     img = cv2.imread("./tmp.jpg",0)
     os.remove('./tmp.jpg')
-    ret,thresh = cv2.threshold(img,2*np.mean(img),255,0) 
+    ret,thresh = cv2.threshold(img,0.7*np.mean(img),255,0) # 0.7*np.mean(img) is threshold for detecting contour; higher values means less contour 
     im2, contours, hierarchy = cv2.findContours(thresh, 1, 2)
     _ = cv2.drawContours(img, contours, -1, (0,255,255), 3)
 
