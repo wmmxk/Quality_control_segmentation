@@ -1,18 +1,19 @@
 ### Summary
 
-This repo is two subtasks involved in training a neural network for image segmentation.
+This repo is for two subtasks involved in training a neural network for image segmentation.
 Task 1 is to pair up the annotated contour with the raw image. The module ./libs/match_dic_2_contour.py is for this.
 
-In the version, the manually annotated contour is compared with contour genereated by cv2. 
+In the current version, the manually annotated contour is compared with contour genereated by cv2. 
 
-Task 2 is to create a cyclic data generator. The module ./libs/train_generator.py is  for this task
+Task 2 is to create a cyclic data generator. The module ./libs/train_generator.py is  for this task.
 
 
 ### Dependencies
-python: 3.6
-cv2: 3.2.0
-dicom: 0.9.9
-numpy: 1.11.3
+python: 3.6;
+cv2: 3.2.0;
+dicom: 0.9.9;
+numpy: 1.11.3;
+PIL: 4.1.1
 
 
 

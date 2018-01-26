@@ -10,7 +10,7 @@ do
    for contourFile in `ls $currentContourPath/i-contours/ |head -n 1`
    do
 		  dicFolder=$dicPath/$dicID 
-      contourFilePath=$currentContourPath/$contourFile
+      contourFilePath=$currentContourPath/i-contours/$contourFile
 			outFile=$outputDir/${dicID}_${contourFile:3:-19}.jpg
 			echo $dicFolder $contourFilePath  $outFile 
 	  done
